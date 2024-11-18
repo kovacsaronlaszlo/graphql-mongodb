@@ -1,0 +1,11 @@
+docker run --name mongo -p 27017:27017 -d mongo
+
+check container run:
+docker container ls
+
+start a container:
+docker container start mongo
+
+
+stop a container:
+docker container stop mongo
