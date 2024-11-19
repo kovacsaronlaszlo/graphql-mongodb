@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Lesson } from './lesson.entity';
 import { Repository } from 'typeorm';
+import { randomUUID } from 'crypto';
 
 @Injectable()
 export class LessonService {
@@ -11,6 +12,7 @@ export class LessonService {
 
   async createLesson(name, startDate, endDate): Promise<Lesson> {
     const lesson = this.lessonRepository.create({
+      id: randomUUID(),
       name,
       startDate,
       endDate,
