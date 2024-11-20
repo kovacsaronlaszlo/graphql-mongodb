@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Student } from './student.entity';
 import { Repository } from 'typeorm';
-import { CreateStudentInput } from './studen-input.dto';
+import { CreateStudentInput } from './studen.input.dto';
 import { randomUUID } from 'crypto';
 
 @Injectable()
